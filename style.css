@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+
+
 :root{
     --color-1: #222831;
     --color-2: #31363F;
@@ -117,6 +119,12 @@ header{
     color: var(--color-8);
 }
 
+.sectionTitle{
+    text-align: center;
+    color: var(--color-4);
+    opacity: 0;
+}
+
 .skillTitle{
     text-align: center;
     color: var(--color-4);
@@ -127,6 +135,9 @@ header{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    opacity: 0;
+
+
 }
 
 .mySkills{
@@ -135,7 +146,6 @@ header{
     gap: 2rem;
     background: var(--color-5);
     padding: 2rem;
-    opacity: 1
 }
 
 .mySkills h1{
@@ -148,6 +158,7 @@ header{
     border-radius: 1rem;
     padding: 2rem;
     width: 50%;
+    opacity: 0;
 }
 
 .skills h2{
@@ -170,16 +181,24 @@ header{
     transition: 1s;
 }
 
+.myProjects{
+    height: 300px;
+}
+
 .visible{
-    animation: visible 1s forwards;
+    animation: visible 1.5s forwards;
 }
 
 .invisible{
-    animation: invisible 1s forwards;
+    animation: invisible 1.5s forwards;
 }
 
 .aparecer{
-    animation: aparecer 1s forwards;
+    animation: aparecer 2.5s forwards;
+}
+
+.desaparecer{
+    animation: desaparecer 2.5s forwards;
 }
 
 @keyframes visible {
@@ -195,7 +214,7 @@ header{
 
 @keyframes invisible {
     from{
-        opacity: 1;
+        opacity: initial;
         transform: initial;
     }
     to{
@@ -210,5 +229,13 @@ header{
     }
     to{
         opacity: 1;
+    }
+}
+@keyframes desaparecer {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
 }
